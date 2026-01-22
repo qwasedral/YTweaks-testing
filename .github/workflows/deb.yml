@@ -116,16 +116,20 @@ jobs:
       - name: Prepare output directory
         run: mkdir -p debs
 
-      - name: Build DEBs
+      - name: Build YTweaks
         run: |
           echo "Building YTweaks..."
           make clean package DEBUG=0 FINALPACKAGE=1
           mv packages/*.deb debs/YTweaks.deb
-          
+
+      - name: Build YTweaks (rootless)
+        run: |
           echo "Building YTweaks (rootless)..."
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb debs/YTweaks-rootless.deb
-          
+
+      - name: List built packages
+        run: |
           echo "Built packages:"
           ls -lh debs/*.deb
 
