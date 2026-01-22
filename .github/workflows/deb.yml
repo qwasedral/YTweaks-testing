@@ -53,7 +53,11 @@ jobs:
     
       - name: Setup Theos
         if: steps.theos.outputs.cache-hit != 'true'
-        run: git clone --quiet --depth=1 --recurse-submodules https://github.com/theos/theos.git
+        uses: actions/checkout@v4.1.7
+        with:
+          repository: theos/theos
+          path: theos
+          submodules: recursive
 
       - name: Download iOS 16.5 SDK
         if: steps.theos.outputs.cache-hit != 'true' && inputs.sdk_version == '16.5'
