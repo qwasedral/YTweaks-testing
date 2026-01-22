@@ -17,4 +17,7 @@ $(TWEAK_NAME)_FILES = Settings.x Tweak.x
 $(TWEAK_NAME)_CFLAGS = -fobjc-arc -DTWEAK_VERSION=$(PACKAGE_VERSION)
 $(TWEAK_NAME)_FRAMEWORKS = UIKit
 
+before-package::
+	find "$(THEOS_STAGING_DIR)/Library/Application Support/YTWKS.bundle" -name "*.strings" -exec plutil -convert binary1 {} \;
+
 include $(THEOS_MAKE_PATH)/tweak.mk
