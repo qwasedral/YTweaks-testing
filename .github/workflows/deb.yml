@@ -1,4 +1,4 @@
-name: Build YTweaks .deb(s) packages
+name: Build YTweaks .deb package
 on:
   workflow_dispatch:
     inputs:
@@ -18,15 +18,12 @@ concurrency:
 
 jobs:
   build:
-    name: Build YTweaks .deb(s) packages
+    name: Build YTweaks .deb package
     runs-on: macos-latest
     permissions:
       contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Install Dependencies
         run: brew install make ldid
 
@@ -56,12 +53,16 @@ jobs:
     
       - name: Setup Theos
         if: steps.theos.outputs.cache-hit != 'true'
-        run: git clone --quiet --depth=1 --recurse-submodules https://github.com/theos/theos.git
+        uses: actions/checkout@v4.1.7
+        with:
+          repository: theos/theos
+          path: theos
+          submodules: recursive
 
       - name: Download iOS 16.5 SDK
         if: steps.theos.outputs.cache-hit != 'true' && inputs.sdk_version == '16.5'
         run: |
-          git clone --quiet -n --depth=1 --filter=tree:0 https://github.com/theos/sdks.git
+          git clone --quiet -n --depth=1 --filter=tree:0 https://github.com/theos/sdks/
           cd sdks
           git sparse-checkout set --no-cone iPhoneOS16.5.sdk
           git checkout
@@ -70,7 +71,7 @@ jobs:
       - name: Download iOS 17.5 SDK
         if: steps.theos.outputs.cache-hit != 'true' && inputs.sdk_version == '17.5'
         run: |
-          git clone --quiet --no-tags --single-branch --depth=1 -n --filter=tree:0 https://github.com/Tonwalter888/iOS-17.5-SDK.git
+          git clone --quiet --no-tags --single-branch --depth=1 -n --filter=tree:0 https://github.com/Tonwalter888/iOS-17.5-SDK
           cd iOS-17.5-SDK
           git sparse-checkout set --no-cone iPhoneOS17.5.sdk
           git checkout
@@ -109,34 +110,37 @@ jobs:
             git clone --quiet --depth=1 https://github.com/PoomSmart/PSHeader.git
           fi
 
+      - name: Clone YTweaks
+        run: git clone --quiet --depth=1 https://github.com/fosterbarnes/YTweaks.git
+
       - name: Build YTweaks
         run: |
-          echo "YTWEAKS_VERSION=$(grep '^Version:' control | cut -d ' ' -f2)" >> $GITHUB_ENV
+          cd YTweaks
           echo "Building YTweaks..."
           make clean package DEBUG=0 FINALPACKAGE=1
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}
+          mv packages/*.deb ${{ github.workspace }}/ytwks.deb
+
+      - name: Collect DEB files
+        run: |
+          mkdir -p debs
+          if [ -f "ytwks.deb" ]; then
+            cp "ytwks.deb" debs/
+            echo "Collected: ytwks.deb"
+          fi
+          echo "Total DEB files: $(ls -1 debs/*.deb 2>/dev/null | wc -l | tr -d ' ')"
 
       - name: Rename DEB files
         run: |
-          mv "com.fosterbarnes.ytweaks_${{ env.YTWEAKS_VERSION }}_iphoneos-arm.deb" "YTweaks v${{ env.YTWEAKS_VERSION }} Rootful.deb"
-          mv "com.fosterbarnes.ytweaks_${{ env.YTWEAKS_VERSION }}_iphoneos-arm64.deb" "YTweaks v${{ env.YTWEAKS_VERSION }} Rootless.deb"
-          echo "Renamed DEB files to YTweaks v${{ env.YTWEAKS_VERSION }} Rootful.deb and YTweaks v${{ env.YTWEAKS_VERSION }} Rootless.deb"
-
-      - name: Output .deb(s)
-        uses: actions/upload-artifact@v6
-        with:
-         name: YTweaks v${{ env.YTWEAKS_VERSION }}
-         path: ${{ github.workspace }}/*.deb
-         if-no-files-found: error
-         overwrite: true
+          cd debs
+          [ -f "ytwks.deb" ] && mv "ytwks.deb" "YTweaks.deb"
+          echo "Renamed DEB file to YTweaks.deb"
 
       - name: Upload to GitHub Releases
         uses: softprops/action-gh-release@v2.5.0
         with:
-          tag_name: v${{ env.YTWEAKS_VERSION }}
-          name: YTweaks v${{ env.YTWEAKS_VERSION }}
-          files: ${{ github.workspace }}/*.deb
+          tag_name: ytweaks-${{ github.run_number }}
+          name: YTweaks DEB (${{ github.run_number }})
+          files: debs/*.deb
           draft: true
 
       - name: Output Release URL
