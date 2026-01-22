@@ -24,6 +24,9 @@ jobs:
       contents: write
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.7
+
       - name: Install Dependencies
         run: brew install make ldid
 
@@ -110,25 +113,21 @@ jobs:
             git clone --quiet --depth=1 https://github.com/PoomSmart/PSHeader.git
           fi
 
-      - name: Clone YTweaks
-        run: git clone --quiet --depth=1 https://github.com/fosterbarnes/YTweaks.git
-
       - name: Prepare output directory
         run: mkdir -p debs
 
       - name: Build DEBs
         run: |
-          cd YTweaks
           echo "Building YTweaks..."
           make clean package DEBUG=0 FINALPACKAGE=1
-          mv packages/*.deb ${{ github.workspace }}/debs/YTweaks.deb
+          mv packages/*.deb debs/YTweaks.deb
           
           echo "Building YTweaks (rootless)..."
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/debs/YTweaks-rootless.deb
+          mv packages/*.deb debs/YTweaks-rootless.deb
           
           echo "Built packages:"
-          ls -lh ${{ github.workspace }}/debs/*.deb
+          ls -lh debs/*.deb
 
       - name: Upload to GitHub Releases
         uses: softprops/action-gh-release@v2.5.0
