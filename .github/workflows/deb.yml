@@ -113,27 +113,22 @@ jobs:
       - name: Clone YTweaks
         run: git clone --quiet --depth=1 https://github.com/fosterbarnes/YTweaks.git
 
-      - name: Build YTweaks
+      - name: Prepare output directory
+        run: mkdir -p debs
+
+      - name: Build DEBs
         run: |
           cd YTweaks
           echo "Building YTweaks..."
           make clean package DEBUG=0 FINALPACKAGE=1
-          mv packages/*.deb ${{ github.workspace }}/ytwks.deb
-
-      - name: Collect DEB files
-        run: |
-          mkdir -p debs
-          if [ -f "ytwks.deb" ]; then
-            cp "ytwks.deb" debs/
-            echo "Collected: ytwks.deb"
-          fi
-          echo "Total DEB files: $(ls -1 debs/*.deb 2>/dev/null | wc -l | tr -d ' ')"
-
-      - name: Rename DEB files
-        run: |
-          cd debs
-          [ -f "ytwks.deb" ] && mv "ytwks.deb" "YTweaks.deb"
-          echo "Renamed DEB file to YTweaks.deb"
+          mv packages/*.deb ${{ github.workspace }}/debs/YTweaks.deb
+          
+          echo "Building YTweaks (rootless)..."
+          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          mv packages/*.deb ${{ github.workspace }}/debs/YTweaks-rootless.deb
+          
+          echo "Built packages:"
+          ls -lh ${{ github.workspace }}/debs/*.deb
 
       - name: Upload to GitHub Releases
         uses: softprops/action-gh-release@v2.5.0
