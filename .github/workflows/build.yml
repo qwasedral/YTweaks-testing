@@ -24,6 +24,9 @@ jobs:
       contents: write
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Install Dependencies
         run: brew install make ldid
 
@@ -106,12 +109,8 @@ jobs:
             git clone --quiet --depth=1 https://github.com/PoomSmart/PSHeader.git
           fi
 
-      - name: Clone YTweaks
-        run: git clone --quiet --depth=1 https://github.com/fosterbarnes/YTweaks.git
-
       - name: Build YTweaks
         run: |
-          cd YTweaks
           echo "YTWEAKS_VERSION=$(grep '^Version:' control | cut -d ' ' -f2)" >> $GITHUB_ENV
           echo "Building YTweaks..."
           make clean package DEBUG=0 FINALPACKAGE=1
