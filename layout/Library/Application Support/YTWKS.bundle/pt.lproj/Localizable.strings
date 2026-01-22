@@ -1,0 +1,40 @@
+// Quit app alert
+"WARNING" = "Aviso";
+"APPLY_DESC" = "Esta ação encerrará o YouTube. Você tem certeza que quer continuar?";
+
+// Fullscreen to the Right
+"FULLSCREEN_TO_THE_RIGHT" = "Tela cheia para a direita";
+"FULLSCREEN_TO_THE_RIGHT_DESC" = "Sempre entrar em tela cheia com o botão/barra inicial à direita.";
+
+// Fullscreen to the Left
+"FULLSCREEN_TO_THE_LEFT" = "Tela cheia para a esquerda";
+"FULLSCREEN_TO_THE_LEFT_DESC" = "Sempre entrar em tela cheia com a parte superior do telefone à direita.";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "Desativar miniplayer flutuante";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Desativa o miniplayer flutuante. Restaura a barra na parte inferior.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "Molduras virtuais de tela cheia";
+"VIRTUAL_BEZEL_DESC" = "Adiciona zonas de toque seguras invisíveis nas barras pretas para evitar toques e pulos acidentais. Destinado a iPhones sem botão inicial.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "Ocultar Resumos de IA (Experimental)";
+"HIDE_AI_SUMMARIES_DESC" = "Oculta os botões de resumo gerados por IA que aparecem abaixo dos vídeos no feed. Recurso experimental.";
+
+// Fix Casting
+"FIX_CASTING" = "Corrigir Transmissão";
+"FIX_CASTING_DESC" = "Tenta corrigir a transmissão alterando alguns sinalizadores A/B. Funciona apenas na v20.10.4 ou inferior";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "Gerenciamento de preferências";
+"IMPORT_PREFERENCES" = "Importar preferências";
+"EXPORT_PREFERENCES" = "Exportar preferências";
+"RESTORE_DEFAULTS" = "Restaurar configurações padrão";
+"IMPORT_CONFIRM" = "Isso substituirá as preferências atuais. Continuar?";
+"RESTORE_CONFIRM" = "Isso redefinirá todas as configurações para os valores padrão. Continuar?";
+"IMPORT_SUCCESS" = "Preferências importadas com sucesso";
+"EXPORT_SUCCESS" = "Preferências exportadas com sucesso";
+"IMPORT_FAILED" = "Falha ao importar preferências";
+"CANCEL" = "Cancelar";
+"YES" = "Sim";

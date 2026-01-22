@@ -1,0 +1,40 @@
+// Quit app alert
+"WARNING" = "경고";
+"APPLY_DESC" = "이 작업은 YouTube를 종료합니다. 계속하시겠습니까?";
+
+// Fullscreen to the Right
+"FULLSCREEN_TO_THE_RIGHT" = "전체 화면 오른쪽으로";
+"FULLSCREEN_TO_THE_RIGHT_DESC" = "홈 버튼/바가 오른쪽에 오도록 항상 전체 화면으로 들어갑니다.";
+
+// Fullscreen to the Left
+"FULLSCREEN_TO_THE_LEFT" = "전체 화면 왼쪽으로";
+"FULLSCREEN_TO_THE_LEFT_DESC" = "전화 상단이 오른쪽에 오도록 항상 전체 화면으로 들어갑니다.";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "플로팅 미니 플레이어 비활성화";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "플로팅 미니 플레이어를 비활성화합니다. 하단 바를 복원합니다.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "가상 전체 화면 베젤";
+"VIRTUAL_BEZEL_DESC" = "검은 막대에 보이지 않는 터치 안전 영역을 추가하여 실수로 탭하거나 건너뛰는 것을 방지합니다. 홈 버튼이 없는 iPhone용입니다.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "AI 요약 숨기기 (실험적)";
+"HIDE_AI_SUMMARIES_DESC" = "피드의 동영상 아래에 나타나는 AI 생성 요약 버튼을 숨깁니다. 실험적 기능입니다.";
+
+// Fix Casting
+"FIX_CASTING" = "TV로 시청하기 수정";
+"FIX_CASTING_DESC" = "일부 A/B 플래그를 변경하여 TV로 시청하기 문제를 해결하려고 시도합니다. v20.10.4 이하에서만 작동합니다";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "환경 설정 관리";
+"IMPORT_PREFERENCES" = "환경 설정 가져오기";
+"EXPORT_PREFERENCES" = "환경 설정 내보내기";
+"RESTORE_DEFAULTS" = "기본 설정 복원";
+"IMPORT_CONFIRM" = "현재 환경 설정이 대체됩니다. 계속하시겠습니까?";
+"RESTORE_CONFIRM" = "모든 설정이 기본값으로 재설정됩니다. 계속하시겠습니까?";
+"IMPORT_SUCCESS" = "환경 설정을 성공적으로 가져왔습니다";
+"EXPORT_SUCCESS" = "환경 설정을 성공적으로 내보냈습니다";
+"IMPORT_FAILED" = "환경 설정 가져오기 실패";
+"CANCEL" = "취소";
+"YES" = "예";

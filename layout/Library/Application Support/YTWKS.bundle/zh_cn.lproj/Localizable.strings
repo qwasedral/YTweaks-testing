@@ -1,0 +1,40 @@
+// Quit app alert
+"WARNING" = "警告";
+"APPLY_DESC" = "执行此操作需要关闭 YouTube，是否继续？";
+
+// Fullscreen to the Right
+"FULLSCREEN_TO_THE_RIGHT" = "全屏向右";
+"FULLSCREEN_TO_THE_RIGHT_DESC" = "始终以主屏幕按钮/栏在右侧的方式进入全屏。";
+
+// Fullscreen to the Left
+"FULLSCREEN_TO_THE_LEFT" = "全屏向左";
+"FULLSCREEN_TO_THE_LEFT_DESC" = "始终以手机顶部在右侧的方式进入全屏。";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "禁用浮动迷你播放器";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "禁用浮动迷你播放器。恢复底部栏。";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "虚拟全屏边框";
+"VIRTUAL_BEZEL_DESC" = "在黑条上添加不可见的触摸安全区域，以防止意外点击和跳过。适用于没有主屏幕按钮的 iPhone。";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "隐藏 AI 摘要（实验性）";
+"HIDE_AI_SUMMARIES_DESC" = "隐藏出现在信息流中视频下方的 AI 生成的摘要按钮。实验性功能。";
+
+// Fix Casting
+"FIX_CASTING" = "修复投屏";
+"FIX_CASTING_DESC" = "尝试通过更改一些 A/B 标志来修复投屏功能。仅适用于 v20.10.4 或更低版本";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "偏好设置管理";
+"IMPORT_PREFERENCES" = "导入偏好设置";
+"EXPORT_PREFERENCES" = "导出偏好设置";
+"RESTORE_DEFAULTS" = "恢复默认设置";
+"IMPORT_CONFIRM" = "这将替换当前的偏好设置。是否继续？";
+"RESTORE_CONFIRM" = "这将把所有设置重置为默认值。是否继续？";
+"IMPORT_SUCCESS" = "成功导入偏好设置";
+"EXPORT_SUCCESS" = "成功导出偏好设置";
+"IMPORT_FAILED" = "导入偏好设置失败";
+"CANCEL" = "取消";
+"YES" = "是";

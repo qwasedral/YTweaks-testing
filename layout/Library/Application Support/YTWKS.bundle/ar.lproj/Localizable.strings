@@ -1,0 +1,40 @@
+// Quit app alert
+"WARNING" = "تحذير";
+"APPLY_DESC" = "سيؤدي هذا الإجراء إلى إغلاق التطبيق. هل أنت متأكد أنك تَوَد الاستمرار؟";
+
+// Fullscreen to the Right
+"FULLSCREEN_TO_THE_RIGHT" = "ملء الشاشة إلى اليمين";
+"FULLSCREEN_TO_THE_RIGHT_DESC" = "دخول وضع ملء الشاشة دائماً مع زر/شريط الصفحة الرئيسية على الجانب الأيمن.";
+
+// Fullscreen to the Left
+"FULLSCREEN_TO_THE_LEFT" = "ملء الشاشة إلى اليسار";
+"FULLSCREEN_TO_THE_LEFT_DESC" = "دخول وضع ملء الشاشة دائماً مع أعلى الهاتف على الجانب الأيمن.";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "تعطيل مشغل مصغر عائم";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "تعطيل المشغل المصغر العائم. يعيد الشريط السفلي.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "حواف الشاشة الكاملة الافتراضية";
+"VIRTUAL_BEZEL_DESC" = "يضيف مناطق لمس آمنة غير مرئية على الأشرطة السوداء لمنع النقرات والقفزات العرضية. مخصص لأجهزة iPhone بدون زر الصفحة الرئيسية.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "إخفاء ملخصات الذكاء الاصطناعي (تجريبي)";
+"HIDE_AI_SUMMARIES_DESC" = "إخفاء أزرار الملخصات التي تم إنشاؤها بواسطة الذكاء الاصطناعي والتي تظهر أسفل مقاطع الفيديو في الخلاصة. ميزة تجريبية.";
+
+// Fix Casting
+"FIX_CASTING" = "إصلاح البث";
+"FIX_CASTING_DESC" = "محاولة إصلاح البث عن طريق تغيير بعض علامات A/B. يعمل فقط على الإصدار v20.10.4 أو الأقل";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "إدارة التفضيلات";
+"IMPORT_PREFERENCES" = "استيراد التفضيلات";
+"EXPORT_PREFERENCES" = "تصدير التفضيلات";
+"RESTORE_DEFAULTS" = "استعادة الإعدادات الافتراضية";
+"IMPORT_CONFIRM" = "سيؤدي هذا إلى استبدال التفضيلات الحالية. هل تريد المتابعة؟";
+"RESTORE_CONFIRM" = "سيؤدي هذا إلى إعادة تعيين جميع الإعدادات إلى القيم الافتراضية. هل تريد المتابعة؟";
+"IMPORT_SUCCESS" = "تم استيراد التفضيلات بنجاح";
+"EXPORT_SUCCESS" = "تم تصدير التفضيلات بنجاح";
+"IMPORT_FAILED" = "فشل استيراد التفضيلات";
+"CANCEL" = "إلغاء";
+"YES" = "نعم";

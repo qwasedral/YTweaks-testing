@@ -1,0 +1,40 @@
+// Quit app alert
+"WARNING" = "Warning";
+"APPLY_DESC" = "This action will quit YouTube. Are you sure you want to continue?";
+
+// Fullscreen to the Right
+"FULLSCREEN_TO_THE_RIGHT" = "Fullscreen to the Right";
+"FULLSCREEN_TO_THE_RIGHT_DESC" = "Always enter fullscreen with home button/bar on the right side.";
+
+// Fullscreen to the Left
+"FULLSCREEN_TO_THE_LEFT" = "Fullscreen to the Left";
+"FULLSCREEN_TO_THE_LEFT_DESC" = "Always enter fullscreen with top of phone on the right side.";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "Disable Floating Miniplayer";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Brings back the classic miniplayer by disabling A/B flag: enableIosFloatingMiniplayer. Requires app restart.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "Virtual fullscreen bezels";
+"VIRTUAL_BEZEL_DESC" = "Adds invisible touch-safe zones on black bars to prevent accidental taps and skips. Meant for iPhones with no home button.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "Hide AI Summaries (Experimental)";
+"HIDE_AI_SUMMARIES_DESC" = "Hides AI-generated summary buttons that appear below videos in the feed. Experimental feature.";
+
+// Fix Casting
+"FIX_CASTING" = "Fix Casting";
+"FIX_CASTING_DESC" = "Attempts to fix casting by changing some A/B flags. Only works on v20.10.4 or lower";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "Preferences management";
+"IMPORT_PREFERENCES" = "Import preferences";
+"EXPORT_PREFERENCES" = "Export preferences";
+"RESTORE_DEFAULTS" = "Restore default settings";
+"IMPORT_CONFIRM" = "This will replace current preferences. Continue?";
+"RESTORE_CONFIRM" = "This will reset all settings to defaults. Continue?";
+"IMPORT_SUCCESS" = "Preferences imported successfully";
+"EXPORT_SUCCESS" = "Preferences exported successfully";
+"IMPORT_FAILED" = "Failed to import preferences";
+"CANCEL" = "Cancel";
+"YES" = "Yes";

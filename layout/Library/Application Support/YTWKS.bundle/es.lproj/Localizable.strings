@@ -1,0 +1,40 @@
+// Quit app alert
+"WARNING" = "Advertencia";
+"APPLY_DESC" = "Esta acción cerrará YouTube. ¿Está seguro de que desea continuar?";
+
+// Fullscreen to the Right
+"FULLSCREEN_TO_THE_RIGHT" = "Pantalla completa a la derecha";
+"FULLSCREEN_TO_THE_RIGHT_DESC" = "Siempre entrar en pantalla completa con el botón/barra de inicio en el lado derecho.";
+
+// Fullscreen to the Left
+"FULLSCREEN_TO_THE_LEFT" = "Pantalla completa a la izquierda";
+"FULLSCREEN_TO_THE_LEFT_DESC" = "Siempre entrar en pantalla completa con la parte superior del teléfono en el lado derecho.";
+
+// A/B Testing Settings
+"ENABLE_IOS_FLOATING_MINIPLAYER" = "Desactivar miniplayer flotante";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "Desactiva el miniplayer flotante. Restaura la barra inferior.";
+
+// Virtual Bezel
+"VIRTUAL_BEZEL" = "Bordes virtuales de pantalla completa";
+"VIRTUAL_BEZEL_DESC" = "Añade zonas táctiles invisibles en las barras negras para evitar toques y saltos accidentales. Diseñado para iPhones sin botón de inicio.";
+
+// Hide AI Summaries (Experimental)
+"HIDE_AI_SUMMARIES" = "Ocultar resúmenes de IA (Experimental)";
+"HIDE_AI_SUMMARIES_DESC" = "Oculta los botones de resumen generados por IA que aparecen debajo de los videos en el feed. Función experimental.";
+
+// Fix Casting
+"FIX_CASTING" = "Reparar emisión";
+"FIX_CASTING_DESC" = "Intenta reparar la emisión cambiando algunas banderas A/B. Solo funciona en v20.10.4 o inferior";
+
+// Preferences Management
+"PREFERENCES_MANAGEMENT" = "Gestión de preferencias";
+"IMPORT_PREFERENCES" = "Importar preferencias";
+"EXPORT_PREFERENCES" = "Exportar preferencias";
+"RESTORE_DEFAULTS" = "Restaurar configuración predeterminada";
+"IMPORT_CONFIRM" = "Esto reemplazará las preferencias actuales. ¿Continuar?";
+"RESTORE_CONFIRM" = "Esto restablecerá toda la configuración a los valores predeterminados. ¿Continuar?";
+"IMPORT_SUCCESS" = "Preferencias importadas correctamente";
+"EXPORT_SUCCESS" = "Preferencias exportadas correctamente";
+"IMPORT_FAILED" = "Error al importar preferencias";
+"CANCEL" = "Cancelar";
+"YES" = "Sí";
