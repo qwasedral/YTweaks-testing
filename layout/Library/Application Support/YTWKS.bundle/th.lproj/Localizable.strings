@@ -12,7 +12,7 @@
 
 // A/B Testing Settings
 "ENABLE_IOS_FLOATING_MINIPLAYER" = "ปิดใช้งานมินิเพลเยอร์ลอย";
-"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "ปิดใช้งานมินิเพลเยอร์ลอย คืนค่าแถบด้านล่างโดยปิดใช้งานแฟล็ก A/B "enableIosFloatingMiniplayer" ต้องรีสตาร์ทแอป";
+"ENABLE_IOS_FLOATING_MINIPLAYER_DESC" = "ปิดใช้งานมินิเพลเยอร์ลอย คืนค่าแถบด้านล่างโดยปิดใช้งานแฟล็ก A/B enableIosFloatingMiniplayer ต้องรีสตาร์ทแอป";
 
 // Virtual Bezel
 "VIRTUAL_BEZEL" = "ขอบจอเต็มหน้าจอเสมือน";
