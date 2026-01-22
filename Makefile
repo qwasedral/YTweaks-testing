@@ -3,7 +3,7 @@ ifeq ($(THEOS_PACKAGE_SCHEME),rootless)
 else ifeq ($(THEOS_PACKAGE_SCHEME),roothide)
 	TARGET = iphone:clang:latest:15.0
 else
-	TARGET := iphone:clang:latest:11.0
+	TARGET = iphone:clang:latest:11.0
 endif
 
 INSTALL_TARGET_PROCESSES = YouTube
@@ -16,8 +16,5 @@ TWEAK_NAME = YTweaks
 $(TWEAK_NAME)_FILES = Settings.x Tweak.x
 $(TWEAK_NAME)_CFLAGS = -fobjc-arc -DTWEAK_VERSION=$(PACKAGE_VERSION)
 $(TWEAK_NAME)_FRAMEWORKS = UIKit
-
-before-package::
-	find "$(THEOS_STAGING_DIR)/Library/Application Support/YTWKS.bundle" -name "*.strings" -exec plutil -convert binary1 {} \;
 
 include $(THEOS_MAKE_PATH)/tweak.mk
