@@ -24,6 +24,9 @@ jobs:
       contents: write
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.1.7
+
       - name: Install Dependencies
         run: brew install make ldid
 
@@ -110,20 +113,15 @@ jobs:
             git clone --quiet --depth=1 https://github.com/PoomSmart/PSHeader.git
           fi
 
-      - name: Clone YTweaks
-        run: git clone --quiet --depth=1 https://github.com/fosterbarnes/YTweaks.git
-
       - name: Build YTweaks
         run: |
-          cd YTweaks
           echo "Building YTweaks..."
           make clean package DEBUG=0 FINALPACKAGE=1
           mv packages/*.deb ${{ github.workspace }}/ytwks.deb
 
       - name: Build YTweaks (rootless)
         run: |
-          cd YTweaks
-          echo "Building YTweaks..."
+          echo "Building YTweaks (rootless)..."
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ytwks_rtls.deb
 
