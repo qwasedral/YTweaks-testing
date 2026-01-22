@@ -119,7 +119,7 @@ jobs:
           make clean package DEBUG=0 FINALPACKAGE=1
           mv packages/*.deb ${{ github.workspace }}/ytwks.deb
 
-      # TODO: Add rootless deb build
+      # TODO: fix building rootless deb
       # - name: Build YTweaks (rootless)
       #   run: |
       #     echo "Building YTweaks (rootless)..."
